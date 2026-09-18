@@ -1,0 +1,48 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{% block title %}DigitAndData | Independent Math &amp; Computer Science Tutoring{% endblock %}</title>
+<!-- Stylesheets -->
+<link href="{% static 'theme/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'theme/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'theme/css/custom.css' %}" rel="stylesheet">
+
+<link rel="shortcut icon" href="{% static 'theme/images/favicon.png' %}" type="image/x-icon">
+<link rel="icon" href="{% static 'theme/images/favicon.png' %}" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+{% block head_extra %}{% endblock %}
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+	<!-- Preloader -->
+	<div class="preloader"></div>
+
+	{% include "theme/_header.html" %}
+
+	{% if messages %}
+		<div class="container mt-4">
+			{% for message in messages %}
+				<div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="alert">{{ message }}</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+	{% block content %}{% endblock %}
+
+	{% include "theme/_footer.html" %}
+
+</div><!-- End Page Wrapper -->
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+{% include "theme/_scripts.html" %}
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>

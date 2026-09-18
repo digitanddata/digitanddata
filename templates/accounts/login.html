@@ -1,0 +1,32 @@
+{% extends "theme/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Log In — DigitAndData{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading="Log In" breadcrumbs=breadcrumbs %}
+
+<section class="contact-details">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-xl-6 col-lg-7">
+				<div class="sec-title">
+					<span class="sub-title">Welcome back</span>
+					<h2>Log In to Your Account</h2>
+					<div class="text">Don't have an account yet? <a href="{% url 'accounts:signup' %}">Sign up as a student</a>.</div>
+				</div>
+				<form method="post">
+					{% csrf_token %}
+					{{ form|crispy }}
+					<input type="hidden" name="next" value="{{ next }}">
+					<div class="mb-3">
+						<button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Log In</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

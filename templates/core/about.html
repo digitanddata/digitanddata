@@ -1,0 +1,411 @@
+{% extends "theme/base.html" %}
+{% load static %}
+
+{% block title %}About Rohit Raheja, IBDP Computer Science Examiner &amp; Math Tutor | DigitAndData{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading="Meet Your Teacher" breadcrumbs=breadcrumbs %}
+
+<!-- About-section (bio hero) -->
+<section class="about-section-four">
+	<div class="auto-container">
+		<div class="row">
+			<!-- Content Column -->
+			<div class="content-column col-xl-7 col-lg-6 order-lg-2 wow fadeInRight" data-wow-delay="600ms">
+				<div class="inner-column">
+					<div class="sec-title">
+						<span class="sub-title">Your teacher</span>
+						<h2>Rohit Raheja, IBDP Computer Science Examiner &amp; Mathematics/Computer Science Educator</h2>
+						<div class="text">I'm an appointed IBDP Computer Science Examiner and a Mathematics, Computer Science &amp; ICT educator with 10+ years of international teaching experience across the IBDP, IGCSE, Cambridge and CBSE curricula. I mark IB Diploma Programme Computer Science examinations to official IB standards, which shapes how I prepare every student: not just for content, but for exactly how an examiner reads an answer.</div>
+						<div class="text">Alongside teaching, I spent over four years as a hands-on software and web developer and IT manager, building real Django web applications, e-commerce platforms and admin dashboards. That combination, examiner-level assessment expertise plus real industry coding experience, is what an independent, teacher-owned tutoring practice for Mathematics and Computer Science is built on. No aggregators, no marketplaces, no middlemen: a direct relationship with your student, built through real conversations, not algorithmic matching.</div>
+					</div>
+
+					<div class="row">
+						<div class="info-box col-lg-6 col-md-6">
+							<div class="inner">
+								<i class="icon flaticon-certificate"></i>
+								<h6 class="title">Appointed IBDP Computer Science Examiner</h6>
+							</div>
+						</div>
+						<div class="info-box col-lg-6 col-md-6">
+							<div class="inner">
+								<i class="icon flaticon-diploma"></i>
+								<h6 class="title">10+ Years Teaching Experience</h6>
+							</div>
+						</div>
+						<div class="info-box col-lg-6 col-md-6">
+							<div class="inner">
+								<i class="icon flaticon-worldwide"></i>
+								<h6 class="title">IB, Cambridge, Edexcel, AP &amp; CBSE</h6>
+							</div>
+						</div>
+						<div class="info-box col-lg-6 col-md-6">
+							<div class="inner">
+								<i class="icon flaticon-engineer"></i>
+								<h6 class="title">4+ Years Software &amp; Web Development</h6>
+							</div>
+						</div>
+						<div class="info-box col-lg-6 col-md-6">
+							<div class="inner">
+								<i class="icon flaticon-teacher"></i>
+								<h6 class="title">B.Ed. in Computer Science &amp; Mathematics</h6>
+							</div>
+						</div>
+						<div class="info-box col-lg-6 col-md-6">
+							<div class="inner">
+								<i class="icon flaticon-handshake"></i>
+								<h6 class="title">One Teacher, Direct Relationships</h6>
+							</div>
+						</div>
+					</div>
+
+					<div class="btn-box animate-2">
+						<a href="{% url 'leads:book_a_call' %}" class="theme-btn btn-style-one"><span class="btn-title">Book a Discovery Call <i class="fa fa-arrow-right"></i></span></a>
+					</div>
+				</div>
+			</div>
+			<div class="image-column col-xl-5 col-lg-6">
+				<div class="inner-column wow fadeInLeft">
+					<div class="image-box">
+						<div class="icon icon-dots-5 bounce-y"></div>
+						<figure class="image overlay-anim wow fadeInUp"><img src="{% static 'theme/images/resource/team12-1.jpg' %}" alt="Rohit Raheja"></figure>
+						<div class="exp-box">
+							<h2 class="title">10+</h2>
+							<p class="text">years teaching</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End about section -->
+
+<!-- Computer Science Expertise -->
+<section class="services-section-four">
+	<div class="auto-container">
+		<div class="sec-title text-center">
+			<span class="sub-title">Computer science</span>
+			<h2>Examiner-Level Computer Science Teaching</h2>
+			<div class="text">Marking IBDP Computer Science examinations to official IB standards means I know exactly what a markscheme is looking for, and I teach toward that from day one.</div>
+		</div>
+		<div class="row">
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-certificate"></i>
+						<h4 class="title">IB Examiner &amp; Assessment</h4>
+						<div class="text">Internal Assessment supervision, moderation, command-term interpretation and criterion-referenced marking, straight from official IB examining experience.</div>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="200ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-web-programming"></i>
+						<h4 class="title">Programming &amp; Computer Science</h4>
+						<div class="text">Python, Java, C++, C#, SQL, Django and HTML/CSS/JS, taught through algorithms, computational thinking, data science and object-oriented design.</div>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-worldwide"></i>
+						<h4 class="title">Full Curriculum Breadth</h4>
+						<div class="text">IBDP Computer Science (SL/HL), IGCSE, Cambridge AS &amp; A Level, CBSE Computer Science &amp; Informatics Practices, and AP Computer Science.</div>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-brainstorm"></i>
+						<h4 class="title">Educational Technology &amp; AI</h4>
+						<div class="text">Teacher training in Tableau and FigJam, plus responsible, AI-aware ChatGPT integration and digital academic-integrity practice.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text-center mt-3">
+			<a href="{% url 'computer_science:hub' %}" class="read-more">See every Computer Science board &amp; track<i class="fa-solid fa-arrow-right"></i></a>
+		</div>
+	</div>
+</section>
+<!-- End Computer Science Expertise -->
+
+<!-- Mathematics Expertise (generated to complement the CS background) -->
+<section class="services-section-four pt-0">
+	<div class="auto-container">
+		<div class="sec-title text-center">
+			<span class="sub-title">Mathematics</span>
+			<h2>The Same Rigor, Applied to Mathematics</h2>
+			<div class="text">Mathematics and Computer Science share the same underlying skill: breaking a problem into logical steps and following them through precisely. A B.Ed. in Computer Science &amp; Mathematics, together with years spent supporting Mathematics departments on assessment design and computer-lab workshops, carries that same examiner-level rigor into every Mathematics session.</div>
+		</div>
+		<div class="row">
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-worldwide"></i>
+						<h4 class="title">Full Curriculum Coverage</h4>
+						<div class="text">IB Mathematics (MYP &amp; DP Analysis/Applications), Cambridge Primary through International A Level, Edexcel, CBSE, ICSE and other major boards.</div>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="200ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-graph"></i>
+						<h4 class="title">Computational Problem-Solving</h4>
+						<div class="text">A programmer's approach to mathematics: spotting patterns, breaking problems into steps, and connecting algebra, calculus and statistics to real computational thinking.</div>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-notebook"></i>
+						<h4 class="title">Exam-Focused Technique</h4>
+						<div class="text">Command-term literacy, markband awareness and positive-marking principles, carried over from IB examiner training into every mathematics assessment.</div>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-puzzle"></i>
+						<h4 class="title">One Teacher, Two Subjects</h4>
+						<div class="text">Since Mathematics and Computer Science come from the same teacher, cross-curricular topics like statistics and algorithmic thinking sit inside a single, connected plan.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text-center mt-3">
+			<a href="{% url 'mathematics:hub' %}" class="read-more">See every Mathematics board<i class="fa-solid fa-arrow-right"></i></a>
+		</div>
+	</div>
+</section>
+<!-- End Mathematics Expertise -->
+
+<!-- AP & SAT/ACT Preparation -->
+<section class="services-section-four pt-0">
+	<div class="auto-container">
+		<div class="sec-title text-center">
+			<span class="sub-title">Standardized tests</span>
+			<h2>AP &amp; SAT/ACT Preparation, Backed by Examiner Insight</h2>
+			<div class="text">Official IB examining experience means test prep isn't a guess about what "should" score well, it's built on knowing exactly what earns and loses marks in a real exam room.</div>
+		</div>
+		<div class="row">
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-web-programming"></i>
+						<h4 class="title"><a href="{% url 'computer_science:detail' 'ap-computer-science-a' %}">AP Computer Science A &amp; Principles</a></h4>
+						<div class="text">Java-based programming, algorithms, data abstraction and the AP CS A Create Performance Task.</div>
+						<a href="{% url 'computer_science:detail' 'ap-computer-science-principles' %}" class="read-more">AP CS Principles too<i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="200ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-bar-chart"></i>
+						<h4 class="title"><a href="{% url 'mathematics:board_detail' 'ap-calculus-ab' %}">AP Calculus &amp; Statistics</a></h4>
+						<div class="text">AP Calculus AB &amp; BC, AP Statistics and AP Precalculus, taught with IB/Cambridge-level criterion-referenced rigor.</div>
+						<a href="{% url 'mathematics:board_detail' 'ap-statistics' %}" class="read-more">AP Statistics too<i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-target"></i>
+						<h4 class="title"><a href="{% url 'mathematics:board_detail' 'sat-math' %}">SAT &amp; ACT Math</a></h4>
+						<div class="text">Focused SAT Math and ACT Math preparation: timing strategy, common trap questions and topic-by-topic score gap analysis.</div>
+						<a href="{% url 'mathematics:board_detail' 'act-math' %}" class="read-more">ACT Math too<i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-certificate"></i>
+						<h4 class="title">Examiner-Informed Strategy</h4>
+						<div class="text">Every practice paper is reviewed the way a real marker reads it: rewarding what scores, and fixing what quietly loses marks.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End AP & SAT Preparation -->
+
+<!-- How I Teach section -->
+<section class="services-section-four pt-0">
+	<div class="auto-container">
+		<div class="sec-title text-center">
+			<span class="sub-title">How I teach</span>
+			<h2>A Plan Built Around Your Student, Not a Template</h2>
+		</div>
+		<div class="row">
+			<div class="service-block-four col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-brainstorm"></i>
+						<h4 class="title">Curriculum-First Planning</h4>
+						<div class="text">Every plan starts with your student's actual board and syllabus, never a generic template.</div>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-bar-chart"></i>
+						<h4 class="title">Progress You Can See</h4>
+						<div class="text">Regular check-ins and real assessment results, so you always know exactly where your student stands.</div>
+					</div>
+				</div>
+			</div>
+			<div class="service-block-four col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+				<div class="inner-box">
+					<div class="content-box">
+						<i class="icon flaticon-support"></i>
+						<h4 class="title">Support Between Sessions</h4>
+						<div class="text">Questions do not wait for the next lesson. Reach out any time between sessions and get a real answer.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End How I Teach section -->
+
+<!-- FAQ Section Four -->
+<section class="faqs-section-four pt-0">
+	<div class="auto-container">
+		<div class="outer-box">
+			<div class="row">
+				<!-- FAQ Column -->
+				<div class="faq-column col-xl-7 col-lg-12 wow fadeInLeft">
+					<div class="inner-column">
+						<div class="sec-title">
+							<span class="sub-title">Our FAQ</span>
+							<h2>Frequently Asked Questions</h2>
+						</div>
+
+						<ul class="accordion-box style-four wow fadeInRight">
+							<!--Block-->
+							<li class="accordion block active-block">
+								<div class="acc-btn active">What curricula do you cover? <div class="icon fa fa-angle-double-right"></div></div>
+								<div class="acc-content current">
+									<div class="content">
+										<div class="text">Mathematics and Computer Science across IB, Cambridge, AP, UK, US, Canadian, Australian, Singaporean, Indian and other major boards. See the Mathematics and Computer Science pages for the full list.</div>
+									</div>
+								</div>
+							</li>
+
+							<!--Block-->
+							<li class="accordion block">
+								<div class="acc-btn">How are sessions scheduled across time zones? <div class="icon fa fa-angle-double-right"></div></div>
+								<div class="acc-content">
+									<div class="content">
+										<div class="text">Sessions are scheduled directly with you after a discovery call, at a time that works for your student's time zone.</div>
+									</div>
+								</div>
+							</li>
+
+							<!--Block-->
+							<li class="accordion block">
+								<div class="acc-btn">How do I get started? <div class="icon fa fa-angle-double-right"></div></div>
+								<div class="acc-content">
+									<div class="content">
+										<div class="text">Book a free discovery call. We'll talk through your child's curriculum, level and goals, then agree on a plan, no obligation.</div>
+									</div>
+								</div>
+							</li>
+
+							<!--Block-->
+							<li class="accordion block">
+								<div class="acc-btn">Is there a minimum commitment? <div class="icon fa fa-angle-double-right"></div></div>
+								<div class="acc-content">
+									<div class="content">
+										<div class="text">No, pricing and packages are discussed on your discovery call so you can decide what fits your student. See the Pricing page for an overview.</div>
+									</div>
+								</div>
+							</li>
+
+							<!--Block-->
+							<li class="accordion block">
+								<div class="acc-btn">Do you teach online, in person, or both? <div class="icon fa fa-angle-double-right"></div></div>
+								<div class="acc-content">
+									<div class="content">
+										<div class="text">All sessions are conducted online over video call, so your student can join from anywhere with a stable internet connection.</div>
+									</div>
+								</div>
+							</li>
+
+							<!--Block-->
+							<li class="accordion block">
+								<div class="acc-btn">What age or grade levels do you work with? <div class="icon fa fa-angle-double-right"></div></div>
+								<div class="acc-content">
+									<div class="content">
+										<div class="text">Students from around ages 10 to 18, spanning upper primary through the end of secondary school and pre-university years.</div>
+									</div>
+								</div>
+							</li>
+
+							<!--Block-->
+							<li class="accordion block">
+								<div class="acc-btn">Can you help with both Mathematics and Computer Science at once? <div class="icon fa fa-angle-double-right"></div></div>
+								<div class="acc-content">
+									<div class="content">
+										<div class="text">Yes. Since both subjects are taught by the same teacher, we can cover both in a single ongoing plan instead of juggling two separate tutors.</div>
+									</div>
+								</div>
+							</li>
+
+							<!--Block-->
+							<li class="accordion block">
+								<div class="acc-btn">Do you offer one-off sessions or only ongoing packages? <div class="icon fa fa-angle-double-right"></div></div>
+								<div class="acc-content">
+									<div class="content">
+										<div class="text">Both. Some students book a single session before an exam, others prefer a regular weekly plan. We will figure out what fits on your discovery call.</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Image Column -->
+				<div class="image-column col-xl-5 col-lg-12 wow fadeInRight">
+					<div class="inner-column">
+						<figure class="image"><img src="{% static 'theme/images/resource/faq4-1.jpg' %}" alt=""></figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--End FAQ Section -->
+
+<!-- Conclusion -->
+<section class="about-section-four pt-0">
+	<div class="auto-container">
+		<div class="sec-title text-center">
+			<span class="sub-title">Bringing it together</span>
+			<h2>One Teacher. Every Board. Every Level.</h2>
+			<div class="text">From examiner-level IBDP Computer Science to AP Calculus, AP Computer Science and SAT/ACT Math prep, every subject on this site is taught by the same person, to the same standard. Explore the full curriculum list for your student's board, or skip straight to a conversation.</div>
+		</div>
+		<div class="text-center btn-box animate-2" style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
+			<a href="{% url 'mathematics:hub' %}" class="theme-btn btn-style-one"><span class="btn-title">Explore Mathematics <i class="fa fa-arrow-right"></i></span></a>
+			<a href="{% url 'computer_science:hub' %}" class="theme-btn btn-style-one alt"><span class="btn-title">Explore Computer Science <i class="fa fa-arrow-right"></i></span></a>
+		</div>
+	</div>
+</section>
+<!-- End Conclusion -->
+
+{% include "theme/_cta_banner.html" %}
+
+{% endblock %}

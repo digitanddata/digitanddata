@@ -1,0 +1,19 @@
+{% load static %}
+{% comment %}
+Usage: {% include "theme/_page_title.html" with page_heading="Mathematics" breadcrumbs=breadcrumbs %}
+`breadcrumbs` is a list of (label, url_or_none) tuples; the last entry is
+rendered as plain text (the current page).
+{% endcomment %}
+<section class="page-title" style="background-image: url({% static 'theme/images/background/page-title-bg.png' %});">
+	<div class="auto-container">
+		<div class="title-outer d-sm-flex align-items-center justify-content-sm-between">
+			<h1 class="title">{{ page_heading }}</h1>
+			<ul class="page-breadcrumb">
+				<li><a href="{% url 'home' %}">Home</a></li>
+				{% for label, url in breadcrumbs %}
+					{% if url %}<li><a href="{{ url }}">{{ label }}</a></li>{% else %}<li>{{ label }}</li>{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>

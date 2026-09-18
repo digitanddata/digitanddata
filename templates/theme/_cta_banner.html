@@ -1,0 +1,23 @@
+{% comment %}
+Reused in place of the theme's original "subscribe for updates" newsletter
+forms (which posted to a dead "#" action) — a real, working call to action
+instead. Optionally override heading via {% include ... with cta_heading="..." %}.
+{% endcomment %}
+<section class="subscribe-section alternate">
+	<div class="auto-container">
+		<div class="outer-box">
+			<div class="row align-items-center">
+				<!-- Title Column -->
+				<div class="title-column col-xl-6">
+					<div class="inner-column">
+						<h2 class="title">{{ cta_heading|default:"Ready to see if we're the right fit for your child?" }}</h2>
+					</div>
+				</div>
+				<!-- Form Column -->
+				<div class="form-column col-xl-6">
+					<a href="{% url 'leads:book_a_call' %}" class="theme-btn btn-style-one dark-bg"><span class="btn-title">Book a Discovery Call</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,377 @@
+/* Site-specific overrides layered on top of the vendor theme (style.css). */
+
+/* Testimonials page: the vendor's testimonial card reserves a circular photo
+   slot above each quote, which we don't have real photos for. Fill it with a
+   plain colored initial instead of leaving that space blank, colored by
+   subject so the Mathematics and Computer Science sections read as visually
+   distinct groups at a glance. */
+.testimonial-block-four .inner-box .image.avatar-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--title-font);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--theme-color-light);
+}
+.testimonial-block-four .inner-box .image.avatar-circle.subject-mathematics {
+  background-color: var(--theme-color2);
+}
+.testimonial-block-four .inner-box .image.avatar-circle.subject-computer_science {
+  background-color: var(--theme-color1);
+}
+
+/* Testimonial quotes run to very different lengths, so give every card in a
+   row the same height the same way we already do for the curriculum/blog
+   hub cards: make the column a flex container and stretch the visible card
+   to fill it, instead of leaving each card at its own natural height. */
+.testimonial-section-four .row {
+  align-items: stretch;
+}
+.testimonial-section-four .row > div {
+  display: flex;
+  margin-bottom: 30px;
+}
+.testimonial-section-four .testimonial-block-four {
+  width: 100%;
+  margin-bottom: 0;
+  display: flex;
+}
+.testimonial-section-four .testimonial-block-four .inner-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-section-four .testimonial-block-four .inner-box .text {
+  flex-grow: 1;
+}
+
+/* Home banner: the vendor theme reserves 300px of bottom padding so the
+   services cards below can overlap it (`.pull-up`). We removed that overlap
+   because the section heading was getting covered by the cards, so trim the
+   banner back down to a normal bottom padding. */
+.banner-section-twelve {
+  padding-bottom: 150px;
+}
+@media (max-width: 991.98px) {
+  .banner-section-twelve {
+    padding-bottom: 120px;
+  }
+}
+
+/* How It Works: make the four process cards match height within each row. */
+.process-section-seven .blocks-column .row {
+  align-items: stretch;
+}
+.process-section-seven .process-block-seven {
+  height: auto;
+  display: flex;
+}
+.process-block-seven .inner-box {
+  width: 100%;
+  height: auto;
+}
+
+/* Mathematics & Computer Science hub pages: curriculum/track cards have
+   summaries of very different lengths (now genuinely detailed syllabus
+   blurbs, not just a short line). Bootstrap's .row is already a flex
+   container with the default align-items: stretch, so each .service-block-four
+   column is already stretched to match the tallest column in its row-line —
+   but the visible bordered box (.inner-box) is a plain block that just
+   shrinks to its own content, so same-row cards still show different box
+   heights. A fixed min-height used to paper over this, but it only matches
+   one row's worth of content by coincidence and falls apart as soon as
+   summaries vary more than that number of pixels. Making the column a flex
+   container and stretching .inner-box to fill it equalizes every card to
+   whichever is tallest in that specific row, at any content length. */
+.services-section-four .service-block-four {
+  display: flex;
+}
+.services-section-four .service-block-four .inner-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.services-section-four .service-block-four .content-box {
+  width: 100%;
+}
+
+/* Pricing page: Bootstrap's row already stretches each .pricing-block
+   column to match the tallest card in its row, but the visible bordered box
+   (.inner-box) was never told to fill that column, so it just shrank to its
+   own content, letting same-row cards show different box heights. Making
+   the column a flex container forces its child to fill the full stretched
+   height; min-height then also equalizes the two separate row-lines with
+   each other. */
+.pricing-block {
+  display: flex;
+}
+.pricing-block .inner-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+}
+.pricing-block .inner-box .title-box .text {
+  min-height: 3em;
+}
+.pricing-block .inner-box .theme-btn {
+  margin-top: auto;
+}
+
+/* Keep the logo pinned near the left edge at every width. The vendor theme
+   reserves an increasingly large 310px "sidebar" in front of the logo on
+   very wide screens (anything past 1699px), which on a large monitor reads
+   as the logo drifting toward the middle of the window instead of sitting
+   to the left the way it does at every other size. Keep it at the same 20px
+   gutter the theme already uses below 1700px, permanently, instead of
+   letting it jump back up to 310px. */
+.header-style-twelve .header-top,
+.header-style-twelve .header-lower {
+  padding-left: 20px;
+}
+
+/* The sticky header (shown once you scroll) is a separate chunk of markup
+   with its own, differently built layout: instead of spanning the full
+   width like header-lower, it sits inside a 1310px "auto-container" that
+   centers itself once the window is wider than that. That makes its logo
+   drift further and further from the true left edge as the screen gets
+   wider, the same centering drift the main header had, just caused by a
+   width cap instead of a growing sidebar. Uncap it and give it the same
+   20px left gutter so the logo lines up with where it sits in the initial,
+   non-sticky header. */
+.header-style-twelve .sticky-header .auto-container {
+  max-width: none;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Header top bar: with the tagline removed, the phone/email block is the
+   only child left, so right-align it where it already visually sat. The
+   vendor theme hides the whole top bar below tablet width, which meant the
+   phone number and email disappeared entirely on mobile, so keep it visible
+   and reflow it into a compact, centered, wrapping row instead. */
+.header-style-twelve .header-top .inner-container {
+  justify-content: flex-end;
+}
+@media (max-width: 991.98px) {
+  .header-style-twelve .header-top {
+    display: block;
+    padding: 10px 15px;
+  }
+  .header-style-twelve .header-top .inner-container {
+    justify-content: center;
+  }
+  .header-style-twelve .header-top .top-right {
+    width: 100%;
+    justify-content: center;
+  }
+  .header-style-twelve .header-top .top-right .list-style-one {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    padding: 0;
+  }
+  .header-style-twelve .header-top .top-right .list-style-one li {
+    margin: 0 12px;
+  }
+  .header-style-twelve .header-top .top-right .social-icon-one {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .header-style-twelve .header-top .top-right .list-style-one li {
+    font-size: 13px;
+    margin: 0 8px;
+  }
+  .header-style-twelve .header-top .top-right .list-style-one li i {
+    margin-right: 6px;
+  }
+}
+
+/* Main navigation. Our real menu has eight items, several multi-word
+   (Mathematics, Computer Science, Testimonials), plus a "Book a Discovery
+   Call" button, all sharing one flex row of non-wrapping floated list items
+   next to a fixed-width logo. That never comfortably fits next to the logo
+   on phones or tablets, so the off-canvas hamburger menu covers both of
+   those, matching the vendor's own original 991.98px breakpoint; only
+   laptop/desktop widths (992px and up) get the full navigation. */
+@media (max-width: 991.98px) {
+  .header-style-twelve .main-menu {
+    display: none;
+  }
+  .header-style-twelve .mobile-nav-toggler {
+    display: block;
+  }
+  .header-style-twelve .main-box {
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  .header-style-twelve .main-box .nav-outer {
+    width: auto;
+  }
+  .header-style-twelve .main-box .toggle-hidden-bar,
+  .header-style-twelve .main-box .outer-box .theme-btn {
+    display: none;
+  }
+}
+
+/* Laptop and desktop widths: full navigation, no hamburger, laid out as a
+   structured two-row grid (four links per row, evenly spread across the
+   full width, each in a uniform bordered box) instead of the vendor's
+   original single-row floated list. That original layout never comfortably
+   fits our eight, several multi-word, links next to the logo at any width,
+   including very large monitors (the vendor theme reserves an increasingly
+   large slice of the header for the logo again past 1699px, which eats the
+   extra room a wider viewport would otherwise gain), so rather than hand off
+   to it at some cutoff and re-fight the same problem there, this grid layout
+   is just used at every width from 992px up. */
+@media (min-width: 992px) {
+  /* Belt and braces: the vendor's own hamburger-visibility rule already
+     stops at 991.98px, so this is a no-op today, but it keeps this block
+     self-contained if that vendor breakpoint ever changes. */
+  .header-style-twelve .mobile-nav-toggler {
+    display: none;
+  }
+
+  /* Keep the logo and the nav in the same row (main-box stays a plain,
+     non-wrapping flex row; nav-outer already shares that row with the logo
+     by default). Inside the nav, lay the 8 links out as a 4-column grid:
+     grid-auto-flow fills row by row, so the first 4 links land on row one
+     and the next 4 on row two automatically, in the same order they're
+     written in the template. The columns are equal width (1fr each) and
+     span the nav's full width, so the four links in each row are spread
+     evenly across the whole row instead of shrink-wrapping into a huddle in
+     the middle with empty space on both sides; justify-items centers each
+     link within its own column. Since the nav sits next to the logo in a
+     flex row with align-items: center (the vendor default), the logo ends
+     up vertically centered against the full two-row block, effectively
+     "merging" the two nav rows around it. Each link also gets a thin border
+     in the site's dark navy theme color, turning it into a small bordered
+     tab. */
+  .header-style-twelve .main-box .nav-outer .main-menu {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .header-style-twelve .main-box .nav-outer .navigation {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    align-content: center;
+    column-gap: 16px;
+    row-gap: 12px;
+    width: 100%;
+    padding: 18px 0;
+  }
+  .header-style-twelve .main-box .nav-outer .navigation > li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .header-style-twelve .main-box .nav-outer .navigation > li > a {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--theme-color2);
+    border-radius: 6px;
+    padding: 10px 14px;
+    line-height: 1.2;
+  }
+  .header-style-twelve .main-box .nav-outer .navigation > li > a:hover,
+  .header-style-twelve .main-box .nav-outer .navigation > li.current > a {
+    border-color: var(--theme-color1);
+  }
+
+  /* The sticky header (shown once you scroll) clones the same link list
+     into its own, differently-styled copy, so it needs the same treatment
+     or the overflow problem comes back the moment someone scrolls. Unlike
+     the main header, the sticky header's logo has no margin-right of its
+     own, it normally relies on justify-content: space-between leaving the
+     gap. But once nav-outer is grown to fill the remaining width (so the nav
+     grid has room to center itself), there's no leftover space left for
+     space-between to distribute, so the logo and the first nav option end up
+     touching. Give nav-outer an explicit left margin instead, to recreate
+     the same breathing room the logo has in the initial (non-sticky)
+     header. */
+  .header-style-twelve .sticky-header .nav-outer {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+  .header-style-twelve .sticky-header .main-menu {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .header-style-twelve .sticky-header .navigation {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    align-content: center;
+    column-gap: 14px;
+    row-gap: 10px;
+    width: 100%;
+    padding: 12px 0;
+  }
+  .header-style-twelve .sticky-header .navigation > li {
+    float: none;
+    margin: 0 !important;
+    padding: 0;
+    width: 100%;
+  }
+  .header-style-twelve .sticky-header .navigation > li > a {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--theme-color2);
+    border-radius: 6px;
+    padding: 8px 12px;
+    line-height: 1.2;
+  }
+  .header-style-twelve .sticky-header .navigation > li > a:hover,
+  .header-style-twelve .sticky-header .navigation > li.current > a {
+    border-color: var(--theme-color1);
+  }
+}
+
+/* Curriculum/track detail page sidebar: the vendor design sized this list
+   for short one-line service names and vertically centers a 45px arrow icon
+   over each link with only 40px of right padding to clear it. Our real
+   curriculum names (e.g. "Cambridge International AS & A Level Information
+   Technology (9626)") run to 60+ characters and wrap onto 2-3 lines at any
+   sidebar width, so the icon was overlapping the wrapped text. Give the
+   text more room and shrink/reposition the icon so it always clears it. */
+.sidebar-service-list li a {
+  padding: 16px 60px 16px 20px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.sidebar-service-list li a i {
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+}
+
+/* Pricing cards enforce a fixed min-height so cards line up when shown side
+   by side. Below the point where they stack into a single column there is
+   nothing to line up with, so the same min-height just adds dead space
+   beneath short cards; relax it there so each card hugs its own content.
+   (The Mathematics/Computer Science hub cards no longer use a fixed
+   min-height — they stretch to match their row via flexbox instead, which
+   already collapses to natural height once there's only one card per row.) */
+@media (max-width: 767.98px) {
+  .pricing-block .inner-box {
+    min-height: 0;
+  }
+}

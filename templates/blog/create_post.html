@@ -1,0 +1,31 @@
+{% extends "theme/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Write a New Post — DigitAndData Blog{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading="Write a New Post" breadcrumbs=breadcrumbs %}
+
+<section class="contact-details">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-xl-9 col-lg-10">
+				<div class="sec-title">
+					<span class="sub-title">Admin only</span>
+					<h2>New Blog Article</h2>
+					<div class="text">This publishes straight to the live blog, ordered by the moment you hit save, unless you uncheck "publish immediately" to keep it as a draft.</div>
+				</div>
+				<form method="post">
+					{% csrf_token %}
+					{{ form|crispy }}
+					<div class="mb-3">
+						<button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Save Post</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

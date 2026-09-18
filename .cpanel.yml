@@ -1,0 +1,17 @@
+---
+# Auto-run by cPanel's Git Version Control "Deploy HEAD Commit" button.
+# See DEPLOYMENT.md (Part A4 / Part B) for how this fits into the workflow.
+#
+# Fill in the two placeholders below with the values cPanel's "Setup Python
+# App" page shows you for this application:
+#   <CPANEL_USER>  — your cPanel username
+#   <PY_VERSION>   — the Python version you chose (e.g. 3.11)
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/<CPANEL_USER>/digitanddata
+    - export VENV=/home/<CPANEL_USER>/virtualenv/digitanddata/<PY_VERSION>/bin
+    - /bin/mkdir -p $DEPLOYPATH/tmp
+    - $VENV/pip install -r $DEPLOYPATH/requirements.txt
+    - $VENV/python $DEPLOYPATH/manage.py migrate --noinput
+    - $VENV/python $DEPLOYPATH/manage.py collectstatic --noinput
+    - /bin/touch $DEPLOYPATH/tmp/restart.txt

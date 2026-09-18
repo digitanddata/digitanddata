@@ -1,0 +1,44 @@
+{% extends "theme/base.html" %}
+
+{% block title %}Mathematics Tutoring — All Curricula | DigitAndData{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading="Mathematics" breadcrumbs=breadcrumbs %}
+
+<!-- Service section Four (adapted: grouped by category, icon-only cards — no per-board photography exists) -->
+<section class="services-section-four">
+	<div class="auto-container">
+		<div class="sec-title">
+			<span class="sub-title">Precision, Personally Taught.</span>
+			<h2>Logic That Adds Up and Loops</h2>
+		</div>
+		{% for label, icon, boards in grouped %}
+			<div class="sec-title{% if not forloop.first %} mt-5{% endif %}">
+				<h2>{{ label }}</h2>
+			</div>
+			{% if boards %}
+				<div class="row">
+					{% for board in boards %}
+						<div class="service-block-four col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+							<div class="inner-box">
+								<div class="content-box">
+									<i class="icon {{ icon }}"></i>
+									<h4 class="title"><a href="{{ board.get_absolute_url }}">{{ board.name }}</a></h4>
+									<div class="text">{{ board.summary|default:"Syllabus details coming soon." }}</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% else %}
+				<p class="text-muted">No boards published in this category yet — add them via the admin.</p>
+			{% endif %}
+		{% endfor %}
+	</div>
+</section>
+<!-- end service section four -->
+
+{% include "theme/_cta_banner.html" %}
+
+{% endblock %}

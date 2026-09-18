@@ -1,0 +1,140 @@
+{% extends "theme/base.html" %}
+
+{% block title %}Pricing — DigitAndData{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading="Pricing" breadcrumbs=breadcrumbs %}
+
+<!-- Pricing Section (adapted from page-pricing.html) -->
+<!-- TODO: replace these placeholder tiers/descriptions with your real pricing structure. -->
+<section>
+	<div class="container pb-70">
+		<div class="row">
+			<!-- Pricing Block -->
+			<div class="pricing-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="200ms">
+				<div class="inner-box">
+					<div class="title-box">
+						<h3 class="title">Hourly Rate</h3>
+						<div class="text">Pay per session, no package required. Ideal for a trial lesson or last-minute help.</div>
+					</div>
+					<div class="price-box">
+						<h2 class="price">Contact for pricing</h2>
+					</div>
+					<ul class="features">
+						<li><i class="fa fa-circle-check"></i>Book a single hour whenever you need one</li>
+						<li><i class="fa fa-circle-check"></i>No package or minimum commitment</li>
+						<li><i class="fa fa-circle-check"></i>Any board, any level</li>
+						<li><i class="fa fa-circle-check"></i>Online, any time zone</li>
+					</ul>
+					<a href="{% url 'leads:contact' %}" class="theme-btn btn-style-one read-more"><span class="btn-title">Ask About Pricing <i class="fa fa-arrow-right"></i></span></a>
+				</div>
+			</div>
+
+			<!-- Pricing Block -->
+			<div class="pricing-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+				<div class="inner-box">
+					<div class="title-box">
+						<h3 class="title">Weekly Package</h3>
+						<div class="text">One regular session every week, same day and time, for steady long-term progress.</div>
+					</div>
+					<div class="price-box">
+						<h2 class="price">Contact for pricing</h2>
+					</div>
+					<ul class="features">
+						<li><i class="fa fa-circle-check"></i>One session booked every week</li>
+						<li><i class="fa fa-circle-check"></i>Same day and time, every week</li>
+						<li><i class="fa fa-circle-check"></i>Syllabus-aligned progress plan</li>
+						<li><i class="fa fa-circle-check"></i>Support between sessions</li>
+					</ul>
+					<a href="{% url 'leads:contact' %}" class="theme-btn btn-style-one read-more"><span class="btn-title">Ask About Pricing <i class="fa fa-arrow-right"></i></span></a>
+				</div>
+			</div>
+
+			<!-- Pricing Block -->
+			<div class="pricing-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
+				<div class="inner-box">
+					<div class="title-box">
+						<h3 class="title">Monthly Package</h3>
+						<div class="text">A block of sessions billed once a month, at a lower rate than paying per hour.</div>
+					</div>
+					<div class="price-box">
+						<h2 class="price">Contact for pricing</h2>
+					</div>
+					<ul class="features">
+						<li><i class="fa fa-circle-check"></i>Multiple sessions billed together each month</li>
+						<li><i class="fa fa-circle-check"></i>Lower rate than single hourly bookings</li>
+						<li><i class="fa fa-circle-check"></i>Same teacher, every time</li>
+						<li><i class="fa fa-circle-check"></i>Reschedule within the month if plans change</li>
+					</ul>
+					<a href="{% url 'leads:contact' %}" class="theme-btn btn-style-one read-more"><span class="btn-title">Ask About Pricing <i class="fa fa-arrow-right"></i></span></a>
+				</div>
+			</div>
+
+			<!-- Pricing Block -->
+			<div class="pricing-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="200ms">
+				<div class="inner-box">
+					<div class="title-box">
+						<h3 class="title">Curriculum Package</h3>
+						<div class="text">A structured plan covering one full board and level, right through to the final exam.</div>
+					</div>
+					<div class="price-box">
+						<h2 class="price">Contact for pricing</h2>
+					</div>
+					<ul class="features">
+						<li><i class="fa fa-circle-check"></i>Full syllabus coverage for one board and level</li>
+						<li><i class="fa fa-circle-check"></i>Milestones mapped to your student's own curriculum</li>
+						<li><i class="fa fa-circle-check"></i>Regular progress check-ins</li>
+						<li><i class="fa fa-circle-check"></i>Past-paper practice included</li>
+					</ul>
+					<a href="{% url 'leads:contact' %}" class="theme-btn btn-style-one read-more"><span class="btn-title">Ask About Pricing <i class="fa fa-arrow-right"></i></span></a>
+				</div>
+			</div>
+
+			<!-- Pricing Block -->
+			<div class="pricing-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+				<div class="inner-box">
+					<div class="title-box">
+						<h3 class="title">Exam-Prep Intensive</h3>
+						<div class="text">Focused, higher-frequency sessions in the weeks leading up to an important exam.</div>
+					</div>
+					<div class="price-box">
+						<h2 class="price">Contact for pricing</h2>
+					</div>
+					<ul class="features">
+						<li><i class="fa fa-circle-check"></i>High-frequency sessions before exams</li>
+						<li><i class="fa fa-circle-check"></i>Past-paper practice for your board</li>
+						<li><i class="fa fa-circle-check"></i>Flexible scheduling</li>
+						<li><i class="fa fa-circle-check"></i>Any board, any level</li>
+					</ul>
+					<a href="{% url 'leads:contact' %}" class="theme-btn btn-style-one read-more"><span class="btn-title">Ask About Pricing <i class="fa fa-arrow-right"></i></span></a>
+				</div>
+			</div>
+
+			<!-- Pricing Block -->
+			<div class="pricing-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
+				<div class="inner-box">
+					<div class="title-box">
+						<h3 class="title">Math + CS Combo</h3>
+						<div class="text">Ongoing sessions across both subjects with the same teacher, never split between two tutors.</div>
+					</div>
+					<div class="price-box">
+						<h2 class="price">Contact for pricing</h2>
+					</div>
+					<ul class="features">
+						<li><i class="fa fa-circle-check"></i>Mathematics and Computer Science in one plan</li>
+						<li><i class="fa fa-circle-check"></i>One teacher, one consistent schedule</li>
+						<li><i class="fa fa-circle-check"></i>Combined progress tracking across both subjects</li>
+						<li><i class="fa fa-circle-check"></i>Priced as a bundle, not two separate plans</li>
+					</ul>
+					<a href="{% url 'leads:contact' %}" class="theme-btn btn-style-one read-more"><span class="btn-title">Ask About Pricing <i class="fa fa-arrow-right"></i></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--End Pricing Section -->
+
+{% include "theme/_cta_banner.html" %}
+
+{% endblock %}

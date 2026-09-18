@@ -1,0 +1,31 @@
+{% extends "theme/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Sign Up — DigitAndData{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading="Create a Student Account" breadcrumbs=breadcrumbs %}
+
+<section class="contact-details">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-xl-7 col-lg-8">
+				<div class="sec-title">
+					<span class="sub-title">Student sign up</span>
+					<h2>Create Your Account</h2>
+					<div class="text">This creates a student account. Course access, practice questions and assignments will appear here once your teacher enrolls you in a course. Already have an account? <a href="{% url 'accounts:login' %}">Log in instead</a>.</div>
+				</div>
+				<form method="post">
+					{% csrf_token %}
+					{{ form|crispy }}
+					<div class="mb-3">
+						<button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Create Account</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

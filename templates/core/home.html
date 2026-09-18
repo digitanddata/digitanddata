@@ -1,0 +1,421 @@
+{% extends "theme/base.html" %}
+{% load static %}
+
+{% block title %}DigitAndData | Independent Math &amp; Computer Science Tutoring{% endblock %}
+
+{% block content %}
+
+	<!-- Banner Section Twelve -->
+	<section class="banner-section-twelve">
+		<div class="bg bg-image gradient-overlay" style="background-image: url({% static 'theme/images/banner/12.jpg' %})"></div>
+
+		<div class="auto-container">
+			<div class="row">
+				<!-- Content Column -->
+				<div class="content-column col-lg-6">
+					<div class="content-box">
+						<span class="sub-title wow fadeInUp">Think First. Build Next.</span>
+						<h1 class="title wow fadeInUp" data-wow-delay="300ms">Tutoring That Adapts to Your Child - Not the Other Way Around.</h1>
+						<div class="btn-box wow fadeInUp" data-wow-delay="900ms">
+							<a href="{% url 'leads:book_a_call' %}" class="theme-btn btn-style-one hover-light"><span class="btn-title">Book a Discovery Call <i class="fa fa-arrow-right"></i></span></a>
+							<a href="{% url 'mathematics:hub' %}" class="theme-btn btn-style-one alt"><span class="btn-title">Explore Curricula <i class="far fa-arrow-alt-circle-right"></i></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Banner Section  -->
+
+	<!-- Services Section Twelve -->
+	<section class="services-section-twelve">
+		<div class="auto-container">
+			<div class="sec-title text-center">
+				<span class="sub-title">What we teach</span>
+				<h2>Two subjects. One teacher. Total focus.</h2>
+			</div>
+			<div class="row">
+
+				<!-- Service Block Twelve-->
+				<div class="service-block-twelve col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="icon-box"><i class="icon flaticon-graph"></i></div>
+						<h4 class="title"><a href="{% url 'mathematics:hub' %}">Mathematics Tutoring</a></h4>
+						<span class="block-tagline" style="display:block;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--theme-color1);margin:-6px 0 10px;">Logic That Adds Up and Loops</span>
+						<div class="text">IB, Cambridge, Edexcel, AP, UK, US, Canada, Australia, Singapore, India and more. Every major board, one consistent teacher.</div>
+						<a href="{% url 'mathematics:hub' %}" class="read-more">See all boards<i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<!-- Service Block Twelve-->
+				<div class="service-block-twelve col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+					<div class="inner-box">
+						<div class="icon-box"><i class="icon flaticon-web-programming"></i></div>
+						<h4 class="title"><a href="{% url 'computer_science:hub' %}">Computer Science Tutoring</a></h4>
+						<span class="block-tagline" style="display:block;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--theme-color1);margin:-6px 0 10px;">Ideas That Divide and Conquer</span>
+						<div class="text">IB CS, AP CS A &amp; Principles, IGCSE, GCSE and more. School-syllabus Computer Science, taught by someone who codes.</div>
+						<a href="{% url 'computer_science:hub' %}" class="read-more">See all boards<i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<!-- Service Block Twelve-->
+				<div class="service-block-twelve col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+					<div class="inner-box">
+						<div class="icon-box"><i class="icon flaticon-rocket-ship"></i></div>
+						<h4 class="title"><a href="{% url 'computer_science:hub' %}">Technical Skills Wing</a></h4>
+						<span class="block-tagline" style="display:block;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--theme-color1);margin:-6px 0 10px;">Skills That Count and Compile</span>
+						<div class="text">Programming, web development, robotics, data science and more. Real skills beyond the school syllabus.</div>
+						<a href="{% url 'computer_science:hub' %}" class="read-more">See all tracks<i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End Services Section -->
+
+	<!-- About section twelve-->
+	<section class="about-section-twelve pt-0">
+		<div class="auto-container">
+			<div class="row">
+				<!-- content-column -->
+				<div class="content-column col-lg-6 col-md-12 wow fadeInLeft">
+					<div class="inner-column">
+						<div class="sec-title">
+							<span class="sub-title">Why an independent tutor</span>
+							<h2>One teacher. Full ownership. A direct relationship with your family.</h2>
+							<div class="text">No aggregators, no marketplaces, no middlemen. Just a direct relationship built through real conversations, not algorithmic matching.</div>
+						</div>
+						<ul class="features-list">
+							<li><i class="fa fa-check"></i>One teacher, full ownership of curriculum, pricing &amp; relationships</li>
+							<li><i class="fa fa-check"></i>Global reach across time zones, not tied to one country's market</li>
+							<li><i class="fa fa-check"></i>Broad curriculum coverage across every major board worldwide</li>
+							<li><i class="fa fa-check"></i>A technical-skills wing that goes beyond school tutoring alone</li>
+						</ul>
+						<div class="btn-box">
+							<a href="{% url 'about' %}" class="theme-btn btn-style-one"><span class="btn-title">Read More <i class="fa fa-arrow-right"></i></span></a>
+						</div>
+					</div>
+				</div>
+				<!-- image-column -->
+				<div class="image-column col-lg-6 col-md-12 wow fadeInRight">
+					<div class="inner-column">
+						<div class="image-box">
+							<figure class="image"><img src="{% static 'theme/images/resource/about12.png' %}" alt=""></figure>
+							<div class="exp-box">
+								<div class="inner">
+									<h3 class="title">1:1</h3>
+									<p class="text">Personal <br>attention</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- About Section -->
+
+	<!-- process section Seven -->
+	<section class="process-section-seven">
+		<div class="auto-container">
+			<div class="row">
+				<!-- content-column -->
+				<div class="content-column col-xl-6 col-lg-12 wow fadeInLeft">
+					<div class="inner-column">
+						<div class="sec-title">
+							<span class="sub-title">How it works</span>
+							<h2>From first call to <br>first lesson</h2>
+							<div class="text">A simple, no-pressure path to finding out if we're the right fit for your child, starting with a free conversation, not a sales pitch.</div>
+						</div>
+						<div class="btn-box">
+							<a href="{% url 'leads:book_a_call' %}" class="theme-btn btn-style-one"><span class="btn-title">Book a Discovery Call <i class="fa fa-arrow-right"></i></span></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Block-column -->
+				<div class="blocks-column col-xl-6 col-lg-12">
+					<div class="row">
+						<!-- Process block Seven -->
+						<div class="process-block-seven col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+							<div class="inner-box">
+								<i class="icon flaticon-confirm-schedule"></i>
+								<span class="count">01</span>
+								<h4 class="title"><a href="{% url 'leads:book_a_call' %}">Book a Free Call</a></h4>
+								<div class="text">Pick a time that works across your time zone. No obligation.</div>
+								<a href="{% url 'leads:book_a_call' %}" class="read-more"><i class="fa-solid fa-arrow-right"></i></a>
+							</div>
+						</div>
+
+						<!-- Process block Seven -->
+						<div class="process-block-seven col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+							<div class="inner-box">
+								<i class="icon flaticon-target"></i>
+								<span class="count">02</span>
+								<h4 class="title"><a href="{% url 'leads:contact' %}">Share Your Goals</a></h4>
+								<div class="text">Tell us your child's curriculum, level, and what success looks like.</div>
+								<a href="{% url 'leads:contact' %}" class="read-more"><i class="fa-solid fa-arrow-right"></i></a>
+							</div>
+						</div>
+
+						<!-- Process block Seven -->
+						<div class="process-block-seven col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+							<div class="inner-box">
+								<i class="icon flaticon-notebook"></i>
+								<span class="count">03</span>
+								<h4 class="title"><a href="{% url 'mathematics:hub' %}">Get a Personalized Plan</a></h4>
+								<div class="text">A syllabus-aligned plan built around your child's actual board and level.</div>
+								<a href="{% url 'mathematics:hub' %}" class="read-more"><i class="fa-solid fa-arrow-right"></i></a>
+							</div>
+						</div>
+
+						<!-- Process block Seven -->
+						<div class="process-block-seven col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+							<div class="inner-box">
+								<i class="icon flaticon-teacher"></i>
+								<span class="count">04</span>
+								<h4 class="title"><a href="{% url 'leads:book_a_call' %}">Start Learning</a></h4>
+								<div class="text">Ongoing 1:1 sessions with the same teacher, every single time.</div>
+								<a href="{% url 'leads:book_a_call' %}" class="read-more"><i class="fa-solid fa-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--   End process section -->
+
+	<!-- Fun Fact Section Nine -->
+	<!-- TODO: these are placeholder figures — replace with your real numbers before launch. -->
+	<section class="fun-fact-section-nine">
+		<div class="auto-container">
+			<div class="fact-counter">
+				<div class="row">
+					<!-- Counter block Nine-->
+					<div class="counter-block-nine col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+						<div class="inner">
+							<div class="content">
+								<i class="icon flaticon-diploma"></i>
+								<div class="count-box"><span class="count-text" data-speed="3000" data-stop="15">0</span>+</div>
+								<h6 class="counter-title">Curricula Covered</h6>
+							</div>
+						</div>
+					</div>
+
+					<!-- Counter block Nine-->
+					<div class="counter-block-nine col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+						<div class="inner">
+							<div class="content">
+								<i class="icon flaticon-worldwide"></i>
+								<div class="count-box"><span class="count-text" data-speed="3000" data-stop="10">0</span>+</div>
+								<h6 class="counter-title">Countries Reached</h6>
+							</div>
+						</div>
+					</div>
+
+					<!-- Counter block Nine-->
+					<div class="counter-block-nine col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+						<div class="inner">
+							<div class="content">
+								<i class="icon flaticon-medal"></i>
+								<div class="count-box"><span class="count-text" data-speed="3000" data-stop="10">0</span>+</div>
+								<h6 class="counter-title">Years Experience</h6>
+							</div>
+						</div>
+					</div>
+
+					<!-- Counter block Nine-->
+					<div class="counter-block-nine col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="900ms">
+						<div class="inner">
+							<div class="content">
+								<i class="icon flaticon-handshake"></i>
+								<div class="count-box"><span class="count-text" data-speed="3000" data-stop="100">0</span>+</div>
+								<h6 class="counter-title">Happy Students</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Fun Fact Section -->
+
+	<!-- Lead magnet section (was: newsletter subscribe) -->
+	<section class="subscribe-section-six">
+		<div class="auto-container">
+			<div class="outer-box">
+				<div class="row">
+					<!-- Form Column -->
+					<div class="form-column col-lg-8 col-md-12 order-lg-2">
+						<div class="inner-column">
+							<div class="sec-title light">
+								<h2>Get the Free Curriculum<br> Readiness Checklist</h2>
+								<div class="text">A short, board-specific checklist to see where your child stands,<br> sent straight to your inbox.</div>
+							</div>
+							<div class="newsletter-form-six">
+								<a href="{% url 'leads:contact' %}" class="theme-btn btn-style-one"><span class="btn-title">Get the Checklist</span></a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Image Column -->
+					<div class="image-column col-lg-4 col-md-12">
+						<div class="inner-column">
+							<figure class="image wow fadeInLeft"><img src="{% static 'theme/images/resource/men.png' %}" alt=""></figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End lead magnet section -->
+
+	<!-- Team Section Twelve -->
+	<!-- TODO: swap in your real name, credentials and photo below. -->
+	<section class="team-section-twelve">
+		<div class="auto-container">
+			<div class="sec-title text-center">
+				<span class="sub-title">Your teacher</span>
+				<h2>The person actually teaching your child</h2>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-lg-4 col-md-6">
+					<div class="team-block-twelve">
+						<div class="inner-box">
+							<div class="image-box">
+								<figure class="image"><a href="{% url 'about' %}"><img src="{% static 'theme/images/resource/team12-1.jpg' %}" alt=""></a></figure>
+								<div class="info-box">
+									<span class="designation">IBDP Computer Science Examiner &amp; Math Tutor</span>
+									<h4 class="name"><a href="{% url 'about' %}">Rohit Raheja</a></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center mt-3">
+				<a href="{% url 'about' %}" class="theme-btn btn-style-one"><span class="btn-title">Read Full Bio <i class="fa fa-arrow-right"></i></span></a>
+			</div>
+		</div>
+	</section>
+	<!-- End Team Section -->
+
+	<!--Call to Action Two -->
+	<section class="call-to-action-two">
+		<div class="auto-container">
+			<div class="outer-box wow fadeIn">
+				<div class="bg bg-pattern-10"></div>
+				<div class="row">
+					<!-- Title Column -->
+					<div class="title-column col-lg-6 col-md-12 order-lg-2">
+						<div class="inner-column">
+							<div class="sec-title mb-0">
+								<h2>Not Sure If We're <br>The Right Fit?</h2>
+								<div class="text">Book a free, no-pressure discovery call,<br> no commitment, just a conversation.</div>
+								<a href="{% url 'leads:book_a_call' %}" class="info-btn"><i class="icon fa fa-calendar"></i> Book a Discovery Call</a>
+							</div>
+						</div>
+					</div>
+					<!-- Image Column -->
+					<div class="image-column col-lg-6 col-md-12">
+						<div class="inner-column">
+							<figure class="image"><img src="{% static 'theme/images/resource/cta.jpg' %}" alt=""></figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End Call to Action -->
+
+	<!-- Explore by Curriculum Section (was: Projects) -->
+	<section class="projects-section-eleven">
+		<div class="auto-container">
+			<div class="sec-title">
+				<span class="sub-title">Explore by curriculum</span>
+				<h2>Find Your Child's Board <br>or Track</h2>
+			</div>
+			<div class="row">
+				<!-- Project block Eleven -->
+				<div class="project-block-eleven col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image"><a href="{% url 'mathematics:hub' %}"><img src="{% static 'theme/images/resource/project12-1.jpg' %}" alt=""></a></figure>
+							<div class="info-box">
+								<h4 class="title"><a href="{% url 'mathematics:hub' %}">Mathematics</a></h4>
+								<span class="designation">All Boards</span>
+								<a href="{% url 'mathematics:hub' %}" class="icon "><i class="fa fa-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Project block Eleven -->
+				<div class="project-block-eleven col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image"><a href="{% url 'computer_science:hub' %}"><img src="{% static 'theme/images/resource/project12-2.jpg' %}" alt=""></a></figure>
+							<div class="info-box">
+								<h4 class="title"><a href="{% url 'computer_science:hub' %}">Computer Science</a></h4>
+								<span class="designation">School Curricula</span>
+								<a href="{% url 'computer_science:hub' %}" class="icon "><i class="fa fa-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Project block Eleven -->
+				<div class="project-block-eleven col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image"><a href="{% url 'computer_science:hub' %}"><img src="{% static 'theme/images/resource/project12-3.jpg' %}" alt=""></a></figure>
+							<div class="info-box">
+								<h4 class="title"><a href="{% url 'computer_science:hub' %}">Technical Skills</a></h4>
+								<span class="designation">Beyond the Syllabus</span>
+								<a href="{% url 'computer_science:hub' %}" class="icon "><i class="fa fa-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Explore by Curriculum Section -->
+
+	<!-- Testimonial Section Ten (dynamic — pulled from the Testimonial model) -->
+	<section class="testimonial-section-ten pt-0">
+		<div class="auto-container">
+			<div class="sec-title text-center">
+				<span class="sub-title">Families say</span>
+				<h2>What Parents Are Saying</h2>
+			</div>
+
+			{% if featured_testimonials %}
+				<div class="two-items-carousel owl-carousel disable-navs">
+					{% for testimonial in featured_testimonials %}
+					<div class="testimonial-block-ten">
+						<div class="inner-box">
+							<div class="info-box">
+								<span class="icon fa fa-quote-right"></span>
+								<h4 class="name">{{ testimonial.name }}</h4>
+								{% if testimonial.curriculum_tag %}<span class="designation">{{ testimonial.curriculum_tag }}</span>{% endif %}
+							</div>
+							<div class="text">{{ testimonial.quote }}</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="text-center mt-3">
+					<a href="{% url 'testimonials' %}" class="theme-btn btn-style-one"><span class="btn-title">Read All Testimonials</span></a>
+				</div>
+			{% else %}
+				<p class="text-center">Testimonials will appear here once families share their experience.</p>
+			{% endif %}
+		</div>
+	</section>
+	<!-- End Testimonial Section -->
+
+{% endblock %}

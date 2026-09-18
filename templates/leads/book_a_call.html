@@ -1,0 +1,67 @@
+{% extends "theme/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Book a Discovery Call — DigitAndData{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading="Book a Discovery Call" breadcrumbs=breadcrumbs %}
+
+<!--Booking Details (reuses the page-contact.html layout — the theme has no
+     dedicated booking-page design, and this is also a lead-capture form) -->
+<section class="contact-details">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-7 col-lg-6">
+				<div class="sec-title">
+					<span class="sub-title">Free discovery call</span>
+					<h2>Tell us about your child</h2>
+				</div>
+				<!-- Booking Form -->
+				<form method="post">
+					{% csrf_token %}
+					{{ form|crispy }}
+					<div class="mb-3">
+						<button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Request Discovery Call</span></button>
+					</div>
+				</form>
+			</div>
+
+			<div class="col-xl-5 col-lg-6">
+				<div class="contact-details__right">
+					<div class="sec-title">
+						<span class="sub-title">What to expect</span>
+						<h2>A short, no-pressure conversation</h2>
+						<div class="text">We'll confirm the exact time by email or WhatsApp once you submit the form below.</div>
+					</div>
+					<ul class="list-unstyled contact-details__info">
+						<li>
+							<div class="icon"><span class="lnr-icon-phone-plus"></span></div>
+							<div class="text">
+								<h6>Free</h6>
+								<span>No cost, no obligation to continue.</span>
+							</div>
+						</li>
+						<li>
+							<div class="icon"><span class="lnr-icon-envelope1"></span></div>
+							<div class="text">
+								<h6>Confirmed by email</h6>
+								<span>We'll follow up to lock in a time that suits you.</span>
+							</div>
+						</li>
+						<li>
+							<div class="icon"><span class="lnr-icon-location"></span></div>
+							<div class="text">
+								<h6>Where we teach</h6>
+								<span>Online, every time zone</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--End Booking Details-->
+
+{% endblock %}

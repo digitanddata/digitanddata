@@ -1,0 +1,50 @@
+{% extends "theme/base.html" %}
+
+{% block title %}Blog — Mathematics & Computer Science | DigitAndData{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading="Blog" breadcrumbs=breadcrumbs %}
+
+<!-- Service section Four (reused for the blog grid: icon-only cards, no per-post photography exists) -->
+<section class="services-section-four">
+	<div class="auto-container">
+		<div class="sec-title">
+			<span class="sub-title">Notes From The Tutoring Room</span>
+			<h2>Reading Worth Your Time</h2>
+			{% if user.is_staff %}
+				<div class="mt-3">
+					<a href="{% url 'blog:create_post' %}" class="theme-btn btn-style-one"><span class="btn-title">Write a New Post</span></a>
+				</div>
+			{% endif %}
+		</div>
+		{% for label, icon, posts in grouped %}
+			<div class="sec-title{% if not forloop.first %} mt-5{% endif %}">
+				<h2>{{ label }}</h2>
+			</div>
+			{% if posts %}
+				<div class="row">
+					{% for post in posts %}
+						<div class="service-block-four col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+							<div class="inner-box">
+								<div class="content-box">
+									<i class="icon {{ icon }}"></i>
+									<h4 class="title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+									<p class="text-muted mb-2">{{ post.published_at|date:"j M Y" }} &middot; {{ post.read_time_minutes }} min read</p>
+									<div class="text">{{ post.excerpt }}</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% else %}
+				<p class="text-muted">No articles published in this category yet — add them via the admin.</p>
+			{% endif %}
+		{% endfor %}
+	</div>
+</section>
+<!-- end service section four -->
+
+{% include "theme/_cta_banner.html" %}
+
+{% endblock %}

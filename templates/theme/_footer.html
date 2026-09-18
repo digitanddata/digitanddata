@@ -1,0 +1,86 @@
+{% load static %}
+<!-- Main Footer -->
+<footer class="main-footer footer-style-twelve">
+	<div class="bg footer-bg-12"></div>
+
+	<!-- Widgets Section -->
+	<div class="widgets-section">
+		<div class="auto-container">
+			<div class="row">
+				<!-- Footer Column -->
+				<div class="footer-column col-xl-3 col-lg-6 col-md-6">
+					<div class="footer-widget about-widget">
+						<div class="logo"><a href="{% url 'home' %}"><img src="{% static 'theme/images/logo-2.png' %}" alt=""></a></div>
+						<div class="text">An independent, teacher-owned tutoring platform for Mathematics and Computer Science, marketed directly to families worldwide. No aggregators, no middlemen.</div>
+					</div>
+				</div>
+
+				<!-- Footer Column -->
+				<div class="footer-column col-xl-4 col-lg-6 col-md-6">
+					<div class="footer-widget contact-widget">
+						<h4 class="widget-title">Contact</h4>
+						<div class="widget-content">
+							<div class="text">Have a question before booking a call? Reach out directly.</div>
+							<ul class="list-style-one light list-vertical">
+								<li><i class="fa fa-phone"></i> <a href="tel:+918745012345">+91 8745 012345</a></li>
+								<li><i class="fa fa-envelope"></i> <a href="mailto:digitanddata@gmail.com">digitanddata@gmail.com</a></li>
+								<li><i class="fa fa-comment"></i> <a href="{% url 'leads:contact' %}">Send us a message</a></li>
+								<li><i class="fas fa-globe"></i> Serving families in every time zone</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Footer Column -->
+				<div class="footer-column col-xl-2 col-lg-6 col-md-6">
+					<div class="footer-widget links-widget">
+						<h4 class="widget-title">Explore</h4>
+						<div class="widget-content">
+							<ul class="user-links style-two">
+								<li><a href="{% url 'mathematics:hub' %}">Mathematics</a></li>
+								<li><a href="{% url 'computer_science:hub' %}">Computer Science</a></li>
+								<li><a href="{% url 'pricing' %}">Pricing</a></li>
+								<li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+								<li><a href="{% url 'about' %}">About</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Footer Column -->
+				<div class="footer-column col-xl-3 col-lg-6 col-md-6">
+					<div class="footer-widget newsletter-widget">
+						<h4 class="widget-title">Stay in Touch</h4>
+						<div class="widget-content">
+							<div class="text">Ready to talk? Book a free discovery call. No pressure, no obligation.</div>
+							<a href="{% url 'leads:book_a_call' %}" class="theme-btn btn-style-one mb-3"><span class="btn-title">Book a Discovery Call</span></a>
+							<!-- TODO: point these at your real social profiles once they're live. -->
+							<ul class="social-icon-one light">
+								<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+								<li><a href="#"><span class="fa fa-x"></span></a></li>
+								<li><a href="#"><span class="fab fa-instagram"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--  Footer Bottom -->
+	<div class="footer-bottom">
+		<div class="auto-container">
+			<div class="inner-container">
+				<div class="copyright-text">Copyright &copy; {% now "Y" %} DigitAndData. All Rights Reserved.</div>
+
+				<!-- TODO: link Privacy Policy / Terms once those pages exist. -->
+				<ul class="footer-nav">
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+					<li><a href="{% url 'leads:contact' %}">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--End Main Footer -->

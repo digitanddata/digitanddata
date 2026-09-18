@@ -1,0 +1,66 @@
+{% extends "theme/base.html" %}
+
+{% block title %}{{ board.name }} Tutor — DigitAndData{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading=board.name breadcrumbs=breadcrumbs %}
+
+<!--Start Services Details (adapted from page-service-details.html) -->
+<section class="services-details">
+	<div class="container">
+		<div class="row">
+			<!--Start Services Details Sidebar-->
+			<div class="col-xl-4 col-lg-4">
+				<div class="service-sidebar">
+					<div class="sidebar-widget service-sidebar-single">
+						<div class="sidebar-service-list">
+							<ul>
+								{% for sibling in siblings %}
+									<li{% if sibling.pk == board.pk %} class="current"{% endif %}>
+										<a href="{{ sibling.get_absolute_url }}"{% if sibling.pk == board.pk %} class="current"{% endif %}><i class="fas fa-angle-right"></i><span>{{ sibling.name }}</span></a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+
+						<div class="service-details-help">
+							<div class="help-shape-1"></div>
+							<div class="help-shape-2"></div>
+							<h2 class="help-title">Not Sure This Is <br> The Right Fit?</h2>
+							<div class="help-icon">
+								<span class="lnr-icon-phone-handset"></span>
+							</div>
+							<div class="help-contact">
+								<p>Talk it through on a free call</p>
+								<a href="{% url 'leads:book_a_call' %}">Book a Discovery Call</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Services Details Sidebar-->
+
+			<!--Start Services Details Content-->
+			<div class="col-xl-8 col-lg-8">
+				<div class="services-details__content">
+					<h3 class="mt-0">{{ board.name }}</h3>
+					{% if board.level_range %}<p class="text-muted">{{ board.level_range }}</p>{% endif %}
+
+					{% if board.summary %}<p>{{ board.summary }}</p>{% endif %}
+
+					{% if board.syllabus_outline %}
+						<h3 class="mt-4">Syllabus Outline</h3>
+						<div>{{ board.syllabus_outline|linebreaks }}</div>
+					{% endif %}
+				</div>
+			</div>
+			<!--End Services Details Content-->
+		</div>
+	</div>
+</section>
+<!--End Services Details-->
+
+{% include "theme/_cta_banner.html" with cta_heading=cta_heading %}
+
+{% endblock %}

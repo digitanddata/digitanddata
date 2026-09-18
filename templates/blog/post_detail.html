@@ -1,0 +1,61 @@
+{% extends "theme/base.html" %}
+
+{% block title %}{{ post.title }} — DigitAndData Blog{% endblock %}
+
+{% block content %}
+
+{% include "theme/_page_title.html" with page_heading=post.title breadcrumbs=breadcrumbs %}
+
+<!--Start Services Details (adapted from page-service-details.html) -->
+<section class="services-details">
+	<div class="container">
+		<div class="row">
+			<!--Start Services Details Sidebar-->
+			<div class="col-xl-4 col-lg-4">
+				<div class="service-sidebar">
+					<div class="sidebar-widget service-sidebar-single">
+						<div class="sidebar-service-list">
+							<ul>
+								{% for sibling in siblings %}
+									<li{% if sibling.pk == post.pk %} class="current"{% endif %}>
+										<a href="{{ sibling.get_absolute_url }}"{% if sibling.pk == post.pk %} class="current"{% endif %}><i class="fas fa-angle-right"></i><span>{{ sibling.title }}</span></a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+
+						<div class="service-details-help">
+							<div class="help-shape-1"></div>
+							<div class="help-shape-2"></div>
+							<h2 class="help-title">Enjoyed This? <br> Let's Talk Learning.</h2>
+							<div class="help-icon">
+								<span class="lnr-icon-phone-handset"></span>
+							</div>
+							<div class="help-contact">
+								<p>Talk it through on a free call</p>
+								<a href="{% url 'leads:book_a_call' %}">Book a Discovery Call</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Services Details Sidebar-->
+
+			<!--Start Services Details Content-->
+			<div class="col-xl-8 col-lg-8">
+				<div class="services-details__content">
+					<h3 class="mt-0">{{ post.title }}</h3>
+					<p class="text-muted">By {{ post.author }} &middot; {{ post.published_at|date:"j F Y" }} &middot; {{ post.read_time_minutes }} min read</p>
+
+					<div>{{ post.body|linebreaks }}</div>
+				</div>
+			</div>
+			<!--End Services Details Content-->
+		</div>
+	</div>
+</section>
+<!--End Services Details-->
+
+{% include "theme/_cta_banner.html" with cta_heading=cta_heading %}
+
+{% endblock %}
