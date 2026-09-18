@@ -8,8 +8,8 @@
 #   <PY_VERSION>   — the Python version you chose (e.g. 3.11)
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/<CPANEL_USER>/digitanddata
-    - export VENV=/home/<CPANEL_USER>/virtualenv/digitanddata/<PY_VERSION>/bin
+    - export DEPLOYPATH=/home/lwwg3z571ayh/digitanddata
+    - export VENV=/home/lwwg3z571ayh/virtualenv/digitanddata/3.11/bin
     - /bin/mkdir -p $DEPLOYPATH/tmp
     - $VENV/pip install -r $DEPLOYPATH/requirements.txt
     - $VENV/python $DEPLOYPATH/manage.py migrate --noinput
