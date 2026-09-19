@@ -8,9 +8,11 @@
 #   <PY_VERSION>   — the Python version you chose (e.g. 3.11)
 deployment:
   tasks:
+    - export REPO=/home/lwwg3z571ayh/repositories/digitanddata
     - export DEPLOYPATH=/home/lwwg3z571ayh/digitanddata
     - export VENV=/home/lwwg3z571ayh/virtualenv/digitanddata/3.11/bin
     - /bin/mkdir -p $DEPLOYPATH/tmp
+    - /usr/bin/rsync -a --exclude='.git' $REPO/ $DEPLOYPATH/
     - $VENV/pip install -r $DEPLOYPATH/requirements.txt
     - $VENV/python $DEPLOYPATH/manage.py migrate --noinput
     - $VENV/python $DEPLOYPATH/manage.py collectstatic --noinput
