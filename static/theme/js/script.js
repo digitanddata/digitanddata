@@ -817,8 +817,17 @@ var THEMEMASCOT = {};
    When document is loading, do
    ========================================================================== */
 	
-	$(window).on('load', function() {
+	// Hide the preloader once the page's own DOM is ready, instead of
+	// waiting for window 'load' -- that event only fires after every
+	// resource on the page finishes, including third-party scripts we
+	// don't control (e.g. hosting-provider analytics beacons). If one of
+	// those stalls or is blocked, 'load' never fires and the preloader
+	// stays on screen forever even though the page itself is fine.
+	$(function() {
 		handlePreloader();
-	});	
+	});
+	// Safety net: force-hide the preloader after 4s no matter what, so a
+	// future stuck/blocked resource can never fully lock the site again.
+	setTimeout(handlePreloader, 4000);
 
 })(window.jQuery);
