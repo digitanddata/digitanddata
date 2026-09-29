@@ -5,18 +5,15 @@ var THEMEMASCOT = {};
 
 
   /* ---------------------------------------------------------------------- */
-  /* --------------------------- Start Demo Switcher  --------------------- */
+  /* Removed: unused theme demo "color switcher" widget.                    */
+  /* It fetched a file ("color-switcher/style-switcher.html") that was      */
+  /* never shipped with this site, and on this hosting setup the request    */
+  /* hangs indefinitely instead of failing fast -- that pending request     */
+  /* kept the browser tab's loading spinner running forever, which looked   */
+  /* like the whole homepage was stuck loading even though it had actually  */
+  /* rendered fine underneath.                                              */
   /* ---------------------------------------------------------------------- */
-  var showSwitcher = true;
   var $body = $('body');
-  var $style_switcher = $('#style-switcher');
-  if( !$style_switcher.length && showSwitcher ) {
-      $.ajax({
-          url: "color-switcher/style-switcher.html",
-          success: function (data) { $body.append(data); },
-          dataType: 'html'
-      });
-  }	
 
   THEMEMASCOT.isRTL = {
     check: function() {
